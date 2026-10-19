@@ -5,7 +5,7 @@ $host   = 'db.iezmybjzefaodyiztfva.supabase.co';
 $port   = '5432';
 $dbname = 'postgres';
 $user   = 'postgres';
-$pass   = '132009abril'; // ⚠️ Substitui pela password que definiste no Supabase
+$pass   = 'rafa132009abril'; // ⚠️ Substitui pela password que definiste no Supabase
 
 try {
     $pdo = new PDO(
