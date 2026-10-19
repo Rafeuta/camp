@@ -1,11 +1,11 @@
 <?php
-// config.php — Versão Vercel + Supabase (Session Pooler)
+// config.php — Vercel + Supabase Final
 
 $host   = 'aws-0-eu-west-2.pooler.supabase.com';
 $port   = '5432';
 $dbname = 'postgres';
 $user   = 'postgres.iezmybjzefaodyiztfva';
-$pass   = 'rafa132009abril'; // A tua password exata
+$pass   = 'rafa132009abril'; 
 
 try {
     $pdo = new PDO(
