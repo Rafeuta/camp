@@ -1,5 +1,11 @@
-FROM dunglas/frankenphp:php8.3
-RUN install-php-extensions pdo_pgsql
-WORKDIR /app
-COPY . /app
+FROM php:8.2-apache
+
+# Instala a extensão do PostgreSQL (para quando voltares a ligar o Supabase)
+RUN apt-get update && apt-get install -y libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql
+
+# Copia os ficheiros para a pasta do Apache
+COPY . /var/www/html/
+
+# O Apache ouve na porta 80 por defeito
 EXPOSE 80
