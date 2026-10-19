@@ -18,7 +18,9 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    die("<h3>Erro de Ligação ao Supabase:</h3><p>" . $e->getMessage() . "</p>");
+     // COMENTA ESTA LINHA PARA O SITE NÃO MORRER SE A BD FALHAR
+    // die("<h3>Erro de Ligação ao Supabase:</h3><p>" . $e->getMessage() . "</p>");
+    $pdo = null; // Se falhar, o site continua mas as queries vão dar erro
 }
 
 // ---------------------------------------------------------
