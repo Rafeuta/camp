@@ -1,12 +1,5 @@
 FROM dunglas/frankenphp:php8.3
-
-# Instala a extensão necessária para ligar ao Supabase (PostgreSQL)
 RUN install-php-extensions pdo_pgsql
-
 WORKDIR /app
-
-# Copia os teus ficheiros para dentro do contentor
 COPY . /app
-
-# Expõe a porta que o Vercel usa
 EXPOSE 80
