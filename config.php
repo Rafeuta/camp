@@ -1,11 +1,11 @@
 <?php
-// config.php — Versão Vercel + Supabase (Pooler)
+// config.php — Versão Vercel + Supabase (Session Pooler)
 
 $host   = 'aws-0-eu-west-2.pooler.supabase.com';
 $port   = '5432';
 $dbname = 'postgres';
 $user   = 'postgres.iezmybjzefaodyiztfva';
-$pass   = 'rafa132009abril'; // ⚠️ METE AQUI A TUA PASSWORD DO SUPABASE
+$pass   = 'rafa132009abril'; // A tua password exata
 
 try {
     $pdo = new PDO(
@@ -18,7 +18,6 @@ try {
         ]
     );
 } catch (PDOException $e) {
-    // Se a ligação falhar, mostra o erro em vez de página branca
     die("<h3>Erro de Ligação ao Supabase:</h3><p>" . $e->getMessage() . "</p>");
 }
 
