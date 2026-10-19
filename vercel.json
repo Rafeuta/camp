@@ -1,12 +1,12 @@
 {
-  "services": [
-    {
+  "services": {
+    "acmp": {
       "runtime": "container",
-      "source": ".",
+      "root": ".",
       "dockerfile": "Dockerfile.vercel"
     }
-  ],
+  },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/(.*)", "destination": { "service": "acmp" } }
   ]
 }
