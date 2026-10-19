@@ -3,7 +3,7 @@
     "acmp": {
       "runtime": "container",
       "root": ".",
-      "dockerfile": "Dockerfile.vercel"
+      "entrypoint": "Dockerfile.vercel"
     }
   },
   "rewrites": [
