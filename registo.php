@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $tipo = 'aluno';
             if ($codigo !== '') {
-                $stmt = $pdo->prepare("SELECT id_codigo FROM acomp_codigos_professor WHERE codigo = ? AND ativo = 1");
+                $stmt = $pdo->prepare("SELECT id_codigo FROM acomp_codigos_professor WHERE codigo = ? AND ativo = TRUE");
                 $stmt->execute([$codigo]);
                 if ($stmt->fetch()) { $tipo = 'professor'; }
                 else { $erro = "Código de professor inválido."; }
